@@ -1,5 +1,5 @@
 /*
- * SDTS V2 Sniffer - GVRET-compatible CAN sniffer for ESP32
+ * CAN_GVRET_Bridge - GVRET-compatible CAN sniffer for ESP32
  *
  * File:    src/web_config.cpp
  * Author:  Ahmed Ellamiee <ahmed.ellamiee@gmail.com>
@@ -22,7 +22,7 @@ static const char kIndexHtml[] PROGMEM = R"HTML(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SDTS V2 Sniffer - Config</title>
+<title>CAN_GVRET_Bridge - Config</title>
 <style>
   :root { --bg:#0f1115; --card:#171a21; --fg:#eaeef5; --muted:#8892a6; --accent:#4aa3ff; --ok:#3ddc97; --err:#ff5c7a; }
   * { box-sizing: border-box; }
@@ -48,7 +48,7 @@ static const char kIndexHtml[] PROGMEM = R"HTML(
 </head>
 <body>
 <header>
-  <h1>SDTS V2 Sniffer</h1>
+  <h1>CAN_GVRET_Bridge</h1>
   <div class="sub">Web configuration console</div>
 </header>
 <main>

@@ -1,5 +1,5 @@
 /*
- * SDTS V2 Sniffer - GVRET-compatible CAN sniffer for ESP32
+ * CAN_GVRET_Bridge - GVRET-compatible CAN sniffer for ESP32
  *
  * File:    src/commbuffer.cpp
  * Author:  Ahmed Ellamiee <ahmed.ellamiee@gmail.com>

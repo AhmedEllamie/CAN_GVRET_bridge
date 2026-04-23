@@ -1,11 +1,11 @@
 /*
- * SDTS V2 Sniffer - GVRET-compatible CAN sniffer for ESP32
+ * CAN_GVRET_Bridge - GVRET-compatible CAN sniffer for ESP32
  *
  * File:    config.h
  * Author:  Ahmed Ellamiee <ahmed.ellamiee@gmail.com>
  * Copyright (c) 2026 Ahmed Ellamiee
  *
- * Central configuration header for the SDTS V2 Sniffer firmware.
+ * Central configuration header for the CAN_GVRET_Bridge firmware.
  * Declares persistent (EEPROMSettings) and runtime (SystemSettings) state,
  * plus all hardware pins and compile-time constants.
  */
@@ -30,7 +30,7 @@
 #define CFG_BUILD_NUM   700
 #define CFG_VERSION     "SDTSv2 2026-04-22"
 #define PREF_NAME       "SDTSv2"
-#define DEVICE_NAME     "SDTSv2-Sniffer"
+#define DEVICE_NAME     "CAN_GVRET_Bridge"
 
 #define NUM_ANALOG  NUM_ANALOG_INPUTS
 #define NUM_DIGITAL 6

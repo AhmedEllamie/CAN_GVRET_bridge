@@ -1,4 +1,4 @@
-SDTS V2 Sniffer
+CAN_GVRET_Bridge
 ===============
 
 CAN sniffer firmware for an ESP32 with an onboard TWAI transceiver (CAN0)
@@ -32,11 +32,34 @@ When WiFi is running (AP mode by default), browse to `http://<device-ip>/`.
 The page displays the current status and lets you change every persisted
 setting. Saving immediately applies the change and writes to NVS.
 
+Web UI behavior:
+- Live status section shows active transport, serial mode, selected CAN bus,
+  and runtime counters.
+- CAN profile fields (`CAN0/CAN1` enable, speed, listen-only) are applied
+  without reboot and are reflected immediately in the worker tasks.
+- Transport settings (`USB/WIFI/BOTH`) are validated in the UI before POSTing
+  to reduce invalid runtime combinations.
+- WiFi credentials updates are persisted immediately; if AP/STA mode changes,
+  reconnect to the new IP after save.
+- Factory reset clears persisted config and reboots into defaults.
+
 API:
 - `GET  /config` - JSON dump of current settings and runtime counters.
 - `POST /config` - JSON body of the settings to update.
 - `POST /reboot` - deferred reboot.
 - `POST /reset`  - factory reset + reboot.
+
+Example `POST /config` payload:
+```json
+{
+  "transport": 2,
+  "serMode": 1,
+  "canSel": 3,
+  "can0Speed": 500000,
+  "can1Speed": 250000,
+  "wifiMode": 2
+}
+```
 
 ### USB CLI
 Connect at the configured baud (default 921600) and press `h` for help.
@@ -54,7 +77,7 @@ SSID=MyCar
 WPA2KEY=supersecret
 ```
 
-Default AP credentials are `SDTSv2-Sniffer` / `sdtsv2sniffer`; change them
+Default AP credentials are `CAN_GVRET_Bridge` / `CAN_GVRET_Bridge`; change them
 as soon as possible.
 
 Architecture overview

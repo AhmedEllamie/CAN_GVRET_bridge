@@ -1,5 +1,5 @@
 /*
- * SDTS V2 Sniffer - GVRET-compatible CAN sniffer for ESP32
+ * CAN_GVRET_Bridge - GVRET-compatible CAN sniffer for ESP32
  *
  * File:    src/main.cpp
  * Author:  Ahmed Ellamiee <ahmed.ellamiee@gmail.com>
@@ -156,7 +156,7 @@ void setup() {
     // stream on first connect.
     if (serialTextAllowed()) {
         Serial.println();
-        Serial.printf("SDTS V2 Sniffer - build %u\n", (unsigned)CFG_BUILD_NUM);
+        Serial.printf("CAN_GVRET_Bridge - build %u\n", (unsigned)CFG_BUILD_NUM);
     }
 
     pinMode(IGN_PIN, INPUT);

@@ -1,5 +1,5 @@
 /*
- * SDTS V2 Sniffer - GVRET-compatible CAN sniffer for ESP32
+ * CAN_GVRET_Bridge - GVRET-compatible CAN sniffer for ESP32
  *
  * File:    src/SerialConsole.cpp
  * Author:  Ahmed Ellamiee <ahmed.ellamiee@gmail.com>
@@ -29,7 +29,7 @@ void SerialConsole::printMenu() {
     // the protocol stream).
     if (!serialTextAllowed()) return;
     Serial.println();
-    Serial.println("=== SDTS V2 Sniffer CLI ===");
+    Serial.println("=== CAN_GVRET_Bridge CLI ===");
     Serial.print("Build: "); Serial.println(CFG_BUILD_NUM);
     Serial.println();
     Serial.println("Short commands:");
